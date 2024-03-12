@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>30-Second Countdown Timer</title>
+</head>
+<body>
+    <h1><em>Are You Smarter Than a 5th Grader?</em></h1>
+    <p><em>You have 30 seconds.</em></p>
+<!-- Display the countdown timer -->
+<p id="countdown"></p>
+
+<script>
+    // Set the countdown duration in seconds
+    var countdownDuration = 30;
+
+    // Function to update the countdown
+    function updateCountdown() {
+        // Get the current time
+        var currentTime = new Date().getTime();
+
+        // Calculate the time remaining
+        var endTime = currentTime + (countdownDuration * 1000);
+        
+        // Update the countdown every second
+        var x = setInterval(function() {
+            // Get the current time
+            var now = new Date().getTime();
+
+            // Calculate the remaining time
+            var distance = endTime - now;
+
+            // Calculate seconds remaining
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the countdown timer
+            document.getElementById("countdown").innerHTML = "Countdown: " + seconds + "s";
+
+            // If the countdown is finished, display "Expired" message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "Countdown: Expired";
+            }
+        }, 1000); // Update every second
+    }
+
+    // Call the function to start the countdown when the page is loaded
+    window.onload = function() {
+        updateCountdown();
+    };
+</script>
+<p>
+    <br>
+<img>
+<img src = "https://i.stack.imgur.com/qXQFM.png"
+width=700>
+<br>
+<script>
+function wrong() {
+    alert("That is so wrong.") ;
+}
+</script>
+
+<input type="text" id="answer" name="answer">
+<button onclick="wrong(); showNextButton()">Submit</button>
+<script>
+    function showNextButton() {
+        document.getElementById("nextButton").removeAttribute("hidden");
+      }
+  </script>
+<br>
+<!-- Button to go to next page -->
+<a href="results.html">
+    <button id="nextButton" hidden 
+  style="width: 200px; height: 50px; 
+  position: absolute; top: 530px; left: 500px;
+  font-size: 20px; background-color: rgb(104, 182, 218);">
+  Next Page</button></a>
+</body>
+</html>

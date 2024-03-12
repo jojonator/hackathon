@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <body>
+    <h1><em>Is This Nicki Minaj?</em></h1>
+    <p>
+    <img>
+    <img src = "https://i.etsystatic.com/37956734/r/il/03c279/4723536405/il_fullxfull.4723536405_bj88.jpg">
+    <br>
+   <script>
+    function yes() {
+        alert("That is correct") ;
+    }
+   </script>
+   <script>
+    function no() {
+        alert("That is incorrect") ;
+    }
+   </script>
+    <!-- Button yes or no -->
+    <button onclick="yes(); showNextButton()">Yes</button>
+    <br>
+    <button onclick="no(); showNextButton()">No</button>
+    <br>
+        <!-- Button to go to next page -->
+        <a href="calc.html">
+          <button id="nextButton" hidden 
+        style="width: 200px; height: 50px; 
+        position: absolute; top: 530px; left: 500px;
+        font-size: 20px; background-color: rgb(104, 182, 218);">
+        Next Page</button></a>
+
+<script>
+  function showNextButton() {
+      document.getElementById("nextButton").removeAttribute("hidden");
+    }
+</script>
+    </p>
+  </body>
+</html>

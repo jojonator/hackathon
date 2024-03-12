@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <body>
+    <h1><em>What Is Your Favorite Color?</em></h1>
+   
+    <p>Pick Your Favorite Color:</p>
+    <input type="color">
+   
+   <script>
+        function showMessage() {
+            alert("Already knew it.") ;
+        }
+       </script>
+
+        <!-- Button confirm -->
+        <button onclick="showMessage(); showNextButton()">Confirm</button>
+
+        <!-- Button to go to next page -->
+        <a href="nickiminaj.html">
+          <button id="nextButton" hidden 
+        style="width: 200px; height: 50px; 
+        position: absolute; top: 530px; left: 500px;
+        font-size: 20px; background-color: rgb(104, 182, 218);">
+        Next Page</button></a>
+
+<script>
+  function showNextButton() {
+      document.getElementById("nextButton").removeAttribute("hidden");
+    }
+</script>
+  </body>
+</html>
